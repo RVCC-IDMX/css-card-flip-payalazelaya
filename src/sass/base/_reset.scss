@@ -8,3 +8,12 @@ body {
   height: 100vh;
   background-color:hsl(219, 94%, 67%);
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding-block: 5px;
+}
