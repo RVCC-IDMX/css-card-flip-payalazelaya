@@ -1,8 +1,15 @@
 /* typography */
+@font-face {
+    font-family: "Poetsen One";
+    src: url('/src/fonts/PoetsenOne-Regular.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Amaranth";
+    src: url('/src/fonts/Amaranth-Regular.ttf') format("truetype");
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-$font: "Poppins", serif;
+$font: "Poetsen One", sans-serif;
 
 // body font styling vars
 $body-font-size: 120%;
