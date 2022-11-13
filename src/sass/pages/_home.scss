@@ -25,8 +25,14 @@ $third-transform: translateZ(2rem);
     }
   }
 
-  &:hover .card__content, &:focus-within .card__content {
+  &:focus-within .card__content {
     transform: rotateY(.5turn);
+  }
+
+  @media (hover) {
+    &:hover .card__content, &:focus-within .card__content {
+      transform: rotateY(.5turn);
+    }
   }
 
   &__front, &__back {
@@ -89,6 +95,18 @@ $third-transform: translateZ(2rem);
     transform: rotateY(.5turn);
     background-color:hsl(197, 100%, 75%);
     transform-style: preserve-3d;
+
+    &--title {
+      font-family: type.$header-font;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-inline: auto;
+      padding-block: 1rem;
+      width: 100%;
+      color: hsl(197, 90%, 81%);
+      background-color: hsl(229, 100%, 12%);
+    }
   }
 }
 
@@ -166,6 +184,7 @@ hr {
     font-size: 1.5rem;
     font-weight: bolder;
     letter-spacing: .2ch;
+    text-shadow: 1px 1px hsl(229, 100%, 11%);
     padding-block-end: .5rem;
     padding-inline-start: .5ch;
   }
