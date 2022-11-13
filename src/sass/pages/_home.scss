@@ -2,15 +2,82 @@
 @use "../abstracts/variables" as var;
 @use "../base/typography" as type;
 
-body {
-  font-family: type.$font;
-  background-color: var.$bg-very-light;
-  width: min(100% - 2rem, 60ch);
-  margin-inline: auto;
-  margin-block: 4rem;
-}
+$first-transform: translateZ(8rem);
+$second-transform: translateZ(4rem);
+$third-transform: translateZ(2rem);
 
-h1 {
-  color: var.$primary-color;
-  text-align: center;
+/* Card Styling */ 
+.card {
+  width: 400px;
+  height: auto;
+  margin-inline: auto;
+  padding-block: 2rem;
+
+  &__content {
+    text-align: center;
+    position: relative;
+    padding: 4em;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+  }
+
+  &:hover .card__content {
+    transform: rotateY(.5turn);
+  }
+
+  &__front, &__back {
+    color:hsl(221, 76%, 44%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18em 2em;
+    outline: 10px solid hsl(234, 100%, 4%);
+    backface-visibility: visible;
+    transform-style: preserve-3d;
+  }
+
+  &__title {
+    font-family: type.$header-font;
+    font-size: 4.5rem;
+    transform: translateZ(5rem);
+    position: relative;
+    padding-block: 1.2em .2em;
+    text-shadow: 2px 1px hsl(240, 100%, 14%);
+  }
+
+  &__subtitle {
+    font-family: type.$header-font;
+    color:hsl(216, 100%, 18%);
+    font-size: 1.25rem;
+    transform: translateZ(3rem);
+  }
+  
+  &__body {
+    font-family: type.$body-font;
+    transform: translateZ(3rem);
+  }
+
+  &__front {
+    background-color:hsl(197, 100%, 75%);
+    background-image: url('/src/images/junhui.jpg');
+    background-size: contain;
+  }
+
+  &__front::before {
+    content: "";
+    width: 380px;
+    height: 560px;
+    border: 5px solid hsl(230, 98%, 20%);
+    position: absolute;
+    transform: $third-transform;
+    top: 10px;
+    left: 10px;
+  }
+
+  &__back {
+    transform: rotateY(.5turn);
+    background-color:hsl(197, 100%, 75%);
+  }
 }

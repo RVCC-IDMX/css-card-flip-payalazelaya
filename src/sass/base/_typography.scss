@@ -1,4 +1,5 @@
 /* typography */
+
 @font-face {
     font-family: "Poetsen One";
     src: url('/src/fonts/PoetsenOne-Regular.ttf') format("truetype");
@@ -8,16 +9,5 @@
     src: url('/src/fonts/Amaranth-Regular.ttf') format("truetype");
 }
 
-
-$font: "Poetsen One", sans-serif;
-
-// body font styling vars
-$body-font-size: 120%;
-$body-font-weight: 350;
-$body-italic-weight: 100;
-
-// display font styling vars
-$display-font: $font;
-$display-weight: 900;
-$display-spacing: 0.15em;
-$display-title-size: 4rem;
+$header-font: "Poetsen One", sans-serif;
+$body-font: "Amaranth", sans-serif;
