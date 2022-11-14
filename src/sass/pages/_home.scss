@@ -2,10 +2,6 @@
 @use "../abstracts/variables" as var;
 @use "../base/typography" as type;
 
-$first-transform: translateZ(8rem);
-$second-transform: translateZ(4rem);
-$third-transform: translateZ(2rem);
-
 /* Card Styling */ 
 .card {
   width: 400px;
@@ -20,17 +16,20 @@ $third-transform: translateZ(2rem);
     transition: transform 2s;
     transform-style: preserve-3d;
 
+
     @media (prefers-reduced-motion: 'no-preference') {
       transition: transform 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     }
   }
 
-  &:focus-within .card__content {
-    transform: rotateY(.5turn);
-  }
-
   @media (hover) {
     &:hover .card__content, &:focus-within .card__content {
+      transform: rotateY(.5turn);
+    }
+  }
+
+  @media (hover: none) {
+    .card__content {
       transform: rotateY(.5turn);
     }
   }
@@ -51,7 +50,7 @@ $third-transform: translateZ(2rem);
   &__title {
     font-family: type.$header-font;
     font-size: 4.5rem;
-    transform: $first-transform;
+    transform: var.$first-transform;
     position: relative;
     padding-block: 1.8em .2em;
     text-shadow: 2px 1px hsl(240, 100%, 14%);
@@ -61,7 +60,7 @@ $third-transform: translateZ(2rem);
     font-family: type.$header-font;
     color:hsl(216, 100%, 12%);
     font-size: 1.25rem;
-    transform: $second-transform;
+    transform: var.$second-transform;
   }
   
   &__body {
@@ -75,7 +74,6 @@ $third-transform: translateZ(2rem);
   }
 
   &__front {
-    background-color:hsl(197, 100%, 75%);
     background-image: url('/src/images/junhui.jpg');
     background-size: contain;
 
@@ -83,7 +81,7 @@ $third-transform: translateZ(2rem);
       content: "";
       border: 5px solid hsl(230, 98%, 20%);
       position: absolute;
-      transform: $third-transform;
+      transform: var.$third-transform;
       top: 10px;
       left: 10px;
       right: 10px;
@@ -116,7 +114,7 @@ hr {
   border-width: 0;
   background-color: hsl(219, 63%, 35%);
   margin-inline: auto;
-  transform: $third-transform;
+  transform: var.$third-transform;
 }
 
 .group-container {
@@ -125,16 +123,16 @@ hr {
   align-items: start;
   justify-content: center;
   padding-block: 2rem;
-  transform: $second-transform;
+  transform: var.$second-transform;
 }
 
 .info {
   text-transform: uppercase;
   padding-block-start: 3rem;
-  padding-block-end: 2rem;
+  padding-block-end: 1rem;
   padding-inline-start: .5ch;
   letter-spacing: .2em;
-  transform: $second-transform;
+  transform: var.$second-transform;
 
   &__birthday, &__favoriteanimal, 
   &__zodiacsign, &__hobbies {
@@ -177,7 +175,7 @@ hr {
   width: 100%;
   margin-inline: auto;
   margin-block-start: 2rem;
-  transform: $second-transform;
+  transform: var.$second-transform;
 
   &__label {
     text-transform: uppercase;
@@ -193,9 +191,9 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-block-start: 3ch;
+    padding-block-start: 4ch;
     font-weight: bold;
     line-height: 1;
-    color:hsl(0, 0%, 0%);
+    color:hsl(229, 100%, 11%);
   }
 }

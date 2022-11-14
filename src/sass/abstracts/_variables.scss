@@ -9,6 +9,10 @@ $bg-medium: $bg-color;
 $bg-dark: func.shade($bg-color, 25%);
 $bg-very-dark: func.shade($bg-color, 50%);
 
+$first-transform: translateZ(8rem);
+$second-transform: translateZ(4rem);
+$third-transform: translateZ(2rem);
+
 
 $primary-color: rebeccapurple;
 $primary-very-light: func.tint($primary-color, 50%);
