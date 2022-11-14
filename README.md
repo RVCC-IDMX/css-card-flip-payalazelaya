@@ -9,6 +9,7 @@ Image Attributions
 -Icon by [BECRIS](https://freeicons.io/profile/3484) on [freeicons.io](https://freeicons.io)
 -Icon by [Chanut is Industries](https://freeicons.io/profile/135331) on [freeicons.io](https://freeicons.io)
 -Icon by [icon king1](https://freeicons.io/profile/3) on [freeicons.io](https://freeicons.io)
+-Favicon made through [Free Favicon Maker](https://formito.com/tools/favicon)
                                 
                                 
 
