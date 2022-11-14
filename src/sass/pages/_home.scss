@@ -117,15 +117,6 @@ hr {
   transform: var.$third-transform;
 }
 
-.group-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: start;
-  justify-content: center;
-  padding-block: 2rem;
-  transform: var.$second-transform;
-}
-
 .info {
   text-transform: uppercase;
   padding-block-start: 3rem;
@@ -139,6 +130,15 @@ hr {
     position: relative;
     font-weight: bold;
   }
+}
+
+.group-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  justify-content: center;
+  padding-block: 2rem;
+  transform: var.$second-transform;
 }
 
 .group {
@@ -188,10 +188,8 @@ hr {
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-block-start: 4ch;
+    justify-content: center;
+    padding-block-start: 1em;
     font-weight: bold;
     line-height: 1;
     color:hsl(229, 100%, 11%);
