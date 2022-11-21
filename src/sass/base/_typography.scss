@@ -2,11 +2,12 @@
 
 @font-face {
     font-family: "Poetsen One";
-    src: url('/src/fonts/PoetsenOne-Regular.ttf') format("truetype");
+    src: url('/fonts/PoetsenOne-Regular.ttf') format("truetype");
 }
+
 @font-face {
     font-family: "Amaranth";
-    src: url('/src/fonts/Amaranth-Regular.ttf') format("truetype");
+    src: url('/fonts/Amaranth-Regular.ttf') format("truetype");
 }
 
 $header-font: "Poetsen One", sans-serif;
