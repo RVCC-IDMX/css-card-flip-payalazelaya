@@ -23,7 +23,8 @@
   }
 
   @media (hover) {
-    &:hover .card__content, &:focus-within .card__content {
+    &:hover .card__content, 
+    &:focus-within .card__content {
       transform: rotateY(.5turn);
     }
   }
@@ -34,7 +35,8 @@
     }
   }
 
-  &__front, &__back {
+  &__front, 
+  &__back {
     color:hsl(221, 76%, 44%);
     position: absolute;
     top: 0;
@@ -74,7 +76,7 @@
   }
 
   &__front {
-    //background-image: url('/src/images/junhui-4.jpg');
+    background-image: url('/images/junhui-4.jpg');
     background-color: hsl(197, 90%, 81%);
 
     &::before {
@@ -125,8 +127,10 @@ hr {
   letter-spacing: .2em;
   transform: var.$second-transform;
 
-  &__birthday, &__favoriteanimal, 
-  &__zodiacsign, &__hobbies {
+  &__birthday, 
+  &__favoriteanimal, 
+  &__zodiacsign, 
+  &__hobbies {
     position: relative;
     font-weight: bold;
   }
